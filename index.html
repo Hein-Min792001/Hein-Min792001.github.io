@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hein Min Lwin – Java Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Hein Min Lwin, a Junior Java Developer with expertise in Spring Boot, Angular, React, and Banking & Finance systems." />
+  <meta name="author" content="Hein Min Lwin" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <header id="site-header">
+    <nav class="nav-container">
+      <a href="#home" class="nav-logo">HML</a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ═══ HERO / INTRODUCTION ═══ -->
+  <section id="home" class="hero-section">
+    <div class="hero-inner">
+      <div class="hero-photo-col">
+        <div class="hero-photo-frame">
+          <img src="photo_2025-12-22_20-17-02.jpg" alt="Hein Min Lwin" id="profile-img" />
+          <div class="hero-photo-fallback" id="photo-fallback">HML</div>
+        </div>
+      </div>
+      <div class="hero-text-col">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Hein Min Lwin</h1>
+        <p class="hero-role">Java Developer <span class="divider">·</span> Team Lead</p>
+        <p class="hero-tagline">
+          Building secure and scalable software for the Banking &amp; Finance industry.
+          Currently leading three major banking system projects at MIT.
+        </p>
+        <div class="hero-cta-row">
+          <a href="#projects" class="btn btn-primary" id="view-work-btn">View My Work</a>
+          <a href="#contact" class="btn btn-outline" id="contact-btn">Get In Touch</a>
+        </div>
+        <div class="hero-badges">
+          <span class="badge">Spring Framework</span>
+          <span class="badge">Oracle</span>
+          <span class="badge">Angular</span>
+          <span class="badge">PostgreSQL</span>
+        </div>
+      </div>
+    </div>
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I'm a highly motivated Java Developer with over two years of hands-on experience
+            in the <strong>Banking &amp; Financial Services</strong> sector at MIT. I currently serve
+            as both a <strong>Developer and Team Lead</strong>, which means I don't just write code —
+            I plan, coordinate, and deliver systems that real banks rely on.
+          </p>
+          <p>
+            My strongest suit is backend development using <strong>Core Java</strong> and
+            <strong>Spring Framework</strong>, paired with solid experience in Oracle and PostgreSQL
+            databases. On the frontend, I work with Angular and React to deliver complete,
+            end-to-end solutions.
+          </p>
+          <p>
+            Outside of work, I'm studying <strong>Computer Science at the University of the People</strong>
+            (GPA: 3.85) and continuously sharpening my skills. I believe in writing clean,
+            maintainable code and communicating clearly with stakeholders and teammates.
+          </p>
+        </div>
+        <div class="about-stats">
+          <div class="stat-card">
+            <span class="stat-number">2+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Banking Projects Led</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">3.85</span>
+            <span class="stat-label">Current GPA</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">5</span>
+            <span class="stat-label">Distinctions (Matric)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick info cards -->
+      <div class="info-strip">
+        <div class="info-item">
+          <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+          <span>Hlaing Township, Yangon, Myanmar</span>
+        </div>
+        <div class="info-item">
+          <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span>Banking &amp; Finance Domain</span>
+        </div>
+        <div class="info-item">
+          <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <span>09976876714</span>
+        </div>
+        <div class="info-item">
+          <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <span>heinminlwin9090@gmail.com</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS ═══ -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <h2 class="section-title">Skills &amp; Technologies</h2>
+      <p class="section-subtitle">A focused stack built around Java enterprise development.</p>
+
+      <div class="skills-grid">
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">
+            <span class="skill-icon">☕</span> Core Java
+          </h3>
+          <ul class="skill-list">
+            <li>Object-Oriented Programming (OOP)</li>
+            <li>Data Structures &amp; Algorithms</li>
+            <li>Multithreading &amp; Concurrency</li>
+            <li>Collections Framework</li>
+            <li>Exception Handling</li>
+            <li>Memory Management</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">
+            <span class="skill-icon">🌿</span> Enterprise Frameworks
+          </h3>
+          <ul class="skill-list">
+            <li>Spring Framework</li>
+            <li>Spring MVC</li>
+            <li>Spring Security</li>
+            <li>JDBC</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">
+            <span class="skill-icon">🗄️</span> Databases
+          </h3>
+          <ul class="skill-list">
+            <li>Oracle</li>
+            <li>PostgreSQL</li>
+            <li>MySQL</li>
+            <li>MSSQL</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">
+            <span class="skill-icon">🖥️</span> Frontend
+          </h3>
+          <ul class="skill-list">
+            <li>Angular</li>
+            <li>React</li>
+            <li>JavaScript (ES6+)</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">
+            <span class="skill-icon">📊</span> Reporting
+          </h3>
+          <ul class="skill-list">
+            <li>Jasper Reports</li>
+            <li>SSRS Reports</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">
+            <span class="skill-icon">🤝</span> Soft Skills
+          </h3>
+          <ul class="skill-list">
+            <li>Team Leadership</li>
+            <li>Agile Collaboration</li>
+            <li>Stakeholder Management</li>
+            <li>Analytical Thinking</li>
+            <li>English (Professional)</li>
+            <li>Korean (Basic)</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ═══ -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <h2 class="section-title">Project Experience</h2>
+      <p class="section-subtitle">Work projects at MIT and a personal project I built on the side.</p>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card" id="project-cbmmis">
+          <div class="project-number">01</div>
+          <div class="project-body">
+            <div class="project-tag">Production · Team Lead</div>
+            <h3 class="project-title">CBMMIS</h3>
+            <p class="project-full-name">Central Bank of Myanmar Management Information System</p>
+            <p class="project-desc">
+              Leading backend development and team coordination for the Central Bank of Myanmar's
+              management information system. Responsible for system architecture decisions,
+              code reviews, and delivery milestones.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Spring Security</span>
+              <span class="tech-tag">Oracle</span>
+              <span class="tech-tag">Jasper Reports</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card" id="project-agentmis">
+          <div class="project-number">02</div>
+          <div class="project-body">
+            <div class="project-tag">Production · Full-Stack Lead</div>
+            <h3 class="project-title">AgentMIS</h3>
+            <p class="project-full-name">Agent Bank Management Information System</p>
+            <p class="project-desc">
+              Managing full-stack development of an agent banking management platform.
+              Covers end-to-end feature delivery from backend APIs to frontend dashboards
+              and complex report generation.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Spring MVC</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Angular</span>
+              <span class="tech-tag">SSRS Reports</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card" id="project-merchant">
+          <div class="project-number">03</div>
+          <div class="project-body">
+            <div class="project-tag">In Progress · Lead Developer</div>
+            <h3 class="project-title">Merchant Onboarding System</h3>
+            <p class="project-full-name">Banking Merchant Registration &amp; Compliance Platform</p>
+            <p class="project-desc">
+              Designing and leading a merchant onboarding workflow system with full banking
+              compliance requirements. Involves close collaboration with stakeholders to
+              define business rules and regulatory requirements.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">Spring Framework</span>
+              <span class="tech-tag">Banking Compliance</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ═══ PERSONAL PROJECTS ═══ -->
+      <div class="personal-project-wrapper" id="personal-project">
+        <div class="personal-project-label">
+          <span>Personal Projects</span>
+        </div>
+
+        <article class="personal-project-card">
+          <div class="pp-header">
+            <div>
+              <div class="project-tag">Side Project · Spring Boot + Angular</div>
+              <h3 class="project-title">Payment Reconciliation Engine</h3>
+              <p class="project-full-name">A digital wallet system — think a mini PayPal built from scratch</p>
+            </div>
+            <a href="https://github.com/Hein-Min792001/payment-wallet" target="_blank" rel="noopener" class="btn btn-outline btn-sm" id="pp-github-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.468-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.02.005 2.047.138 3.006.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.652.243 2.873.12 3.176.77.84 1.234 1.911 1.234 3.221 0 4.61-2.807 5.624-5.48 5.921.43.372.823 1.102.823 2.222 0 1.604-.015 2.896-.015 3.289 0 .322.216.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+
+          <div class="pp-body">
+            <div class="pp-story">
+              <p>
+                A full-featured digital wallet — deposit, transfer, and refund — built to tackle
+                the hard parts of financial software that most tutorials skip.
+              </p>
+              <p>
+                <strong>Pessimistic locking</strong> prevents concurrent overdrafts.
+                A <strong>Redis idempotency layer</strong> stops double-charges on duplicate requests.
+                The <strong>Outbox Pattern</strong> guarantees RabbitMQ notifications survive broker failures.
+              </p>
+            </div>
+
+            <div class="pp-details">
+              <div class="pp-detail-block">
+                <h4>Key Features</h4>
+                <ul class="pp-list">
+                  <li>Wallet creation, deposit, transfer &amp; refund</li>
+                  <li>Duplicate-payment protection via Redis idempotency</li>
+                  <li>Async notifications with RabbitMQ + Outbox Pattern</li>
+                  <li>Paginated transaction history</li>
+                </ul>
+              </div>
+              <div class="pp-detail-block">
+                <h4>Engineering Highlights</h4>
+                <ul class="pp-list">
+                  <li>Balances stored as Long (cents) — zero floating point risk</li>
+                  <li>Double-entry ledger: every transfer = 2 immutable rows</li>
+                  <li>DB-level CHECK constraint as a last safety net</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="pp-tech">
+            <span class="tech-tag">Spring Boot 3</span>
+            <span class="tech-tag">Spring Data JPA</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Redis</span>
+            <span class="tech-tag">RabbitMQ</span>
+            <span class="tech-tag">Angular 17</span>
+            <span class="tech-tag">Docker Compose</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- EWMS Personal Project -->
+      <div class="personal-project-wrapper" id="personal-project-ewms">
+        <article class="personal-project-card">
+          <div class="pp-header">
+            <div>
+              <div class="project-tag">Side Project · Java 21 + Spring Boot + Angular</div>
+              <h3 class="project-title">Enterprise Warehouse Management System</h3>
+              <p class="project-full-name">Full-stack WMS — from purchase order to last-mile delivery</p>
+            </div>
+            <a href="https://github.com/Hein-Min792001/enterprise-wms" target="_blank" rel="noopener" class="btn btn-outline btn-sm" id="ewms-github-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="15" height="15"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.468-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.02.005 2.047.138 3.006.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.652.243 2.873.12 3.176.77.84 1.234 1.911 1.234 3.221 0 4.61-2.807 5.624-5.48 5.921.43.372.823 1.102.823 2.222 0 1.604-.015 2.896-.015 3.289 0 .322.216.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+
+          <div class="pp-body">
+            <div class="pp-story">
+              <p>
+                A production-grade warehouse system covering the full supply chain —
+                from purchase orders and goods receiving all the way to picking, packing, and shipping.
+                Built to scale with 100,000+ products and millions of stock records.
+              </p>
+              <p>
+                Stock updates are protected with <strong>optimistic locking</strong> to prevent race conditions.
+                Every action is recorded in an <strong>immutable audit trail</strong>.
+                <strong>7 fine-grained roles</strong> control exactly what each user can see and do.
+              </p>
+            </div>
+
+            <div class="pp-details">
+              <div class="pp-detail-block">
+                <h4>Key Modules</h4>
+                <ul class="pp-list">
+                  <li>Multi-warehouse inventory management</li>
+                  <li>Purchase Orders → Goods Receipt workflow</li>
+                  <li>Sales Orders → Picking → Packing → Shipping</li>
+                  <li>Real-time stock balances with low-stock alerts</li>
+                </ul>
+              </div>
+              <div class="pp-detail-block">
+                <h4>Engineering Highlights</h4>
+                <ul class="pp-list">
+                  <li>JWT auth + refresh tokens + account lockout</li>
+                  <li>34 tables via Flyway versioned migrations</li>
+                  <li>Scheduled jobs for alerts &amp; token cleanup</li>
+                  <li>Full audit log on every system action</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="pp-tech">
+            <span class="tech-tag">Java 21</span>
+            <span class="tech-tag">Spring Boot 3.2</span>
+            <span class="tech-tag">Spring Security</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Redis</span>
+            <span class="tech-tag">RabbitMQ</span>
+            <span class="tech-tag">Angular 17</span>
+            <span class="tech-tag">Flyway</span>
+            <span class="tech-tag">Docker Compose</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- Training Projects -->
+      <div class="training-section">
+        <h3 class="training-title">Training Projects — JDC Batch 7</h3>
+        <p class="training-desc">
+          Built during Java Developer Class (Batch 7), these projects demonstrate core Java
+          and full-stack fundamentals.
+        </p>
+        <div class="training-grid">
+          <div class="training-card" id="training-hotel">
+            <span class="training-icon">🏨</span>
+            <div>
+              <strong>Hotel Booking System</strong>
+              <p>Room management, booking workflow, and reservation tracking.</p>
+            </div>
+          </div>
+          <div class="training-card" id="training-payroll">
+            <span class="training-icon">💼</span>
+            <div>
+              <strong>Payroll Management System</strong>
+              <p>Employee payroll calculation, salary processing, and reporting.</p>
+            </div>
+          </div>
+          <div class="training-card" id="training-shop">
+            <span class="training-icon">🛒</span>
+            <div>
+              <strong>Online Shopping Website</strong>
+              <p>E-commerce platform with product listing and cart management.</p>
+            </div>
+          </div>
+        </div>
+        <a href="https://github.com/Hein-Min792001" target="_blank" rel="noopener" class="btn btn-outline github-btn" id="github-link-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.468-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.02.005 2.047.138 3.006.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.652.243 2.873.12 3.176.77.84 1.234 1.911 1.234 3.221 0 4.61-2.807 5.624-5.48 5.921.43.372.823 1.102.823 2.222 0 1.604-.015 2.896-.015 3.289 0 .322.216.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EDUCATION ═══ -->
+  <section id="education" class="section education-section">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item" id="edu-uopeople">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2020 – Present</span>
+            <h3>University of the People (UoPeople)</h3>
+            <p class="timeline-sub">Bachelor's in Computer Science · Online · In Progress</p>
+            <p>23 of 40 courses completed · Current GPA: <strong>3.85</strong></p>
+          </div>
+        </div>
+
+        <div class="timeline-item" id="edu-ucsm">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2018 – 2020</span>
+            <h3>University of Computer Studies, Mandalay (UCSM)</h3>
+            <p class="timeline-sub">Computer Science · Transferred to UoPeople</p>
+            <p>Sem 1 GPA: <strong>3.94</strong> · Sem 2 GPA: <strong>3.79</strong></p>
+          </div>
+        </div>
+
+        <div class="timeline-item" id="edu-jdc">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">JDC · Batch 7</span>
+            <h3>Java Developer Class (JDC)</h3>
+            <p class="timeline-sub">Certificate in Java Development</p>
+            <p>Completed hands-on training in Core Java, Spring Framework, and full-stack development.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" id="edu-matric">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Pre-University</span>
+            <h3>Matriculation (High School)</h3>
+            <p class="timeline-sub">Passed with Five Distinctions</p>
+            <p>Strong academic foundation in mathematics and sciences.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">
+        I'm open to new opportunities. Feel free to reach out — I'll reply promptly.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <a href="mailto:heinminlwin9090@gmail.com" class="contact-item" id="email-link">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">heinminlwin9090@gmail.com</span>
+            </div>
+          </a>
+
+          <a href="tel:+959976876714" class="contact-item" id="phone-link">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">09976876714 / 09427164152</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/Hein-Min792001" target="_blank" rel="noopener" class="contact-item" id="github-link">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.089-.745.083-.729.083-.729 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.604-2.665-.305-5.466-1.332-5.466-5.93 0-1.31.468-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.02.005 2.047.138 3.006.404 2.29-1.552 3.296-1.23 3.296-1.23.654 1.652.243 2.873.12 3.176.77.84 1.234 1.911 1.234 3.221 0 4.61-2.807 5.624-5.48 5.921.43.372.823 1.102.823 2.222 0 1.604-.015 2.896-.015 3.289 0 .322.216.694.825.576C20.565 21.796 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">github.com/Hein-Min792001</span>
+            </div>
+          </a>
+
+          <div class="contact-item no-link" id="location-display">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="22" height="22"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+            </div>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Hlaing Township, Yangon, Myanmar</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-note">
+          <blockquote>
+            "I'm currently open to new roles where I can grow as a developer and
+            contribute to a strong engineering team. If you're looking for a Java
+            developer with real-world banking system experience, I'd love to talk."
+          </blockquote>
+          <a href="cv.html" target="_blank" rel="noopener" class="btn btn-primary" id="download-cv-btn">
+            View &amp; Download CV
+          </a>
+          <p style="margin-top:12px;font-size:0.8rem;color:var(--muted);line-height:1.5;">
+            Opens the CV page → press <strong>Ctrl + P</strong> → Save as PDF
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 Hein Min Lwin. Built by hand, with care.</p>
+      <div class="footer-links">
+        <a href="mailto:heinminlwin9090@gmail.com">Email</a>
+        <a href="https://github.com/Hein-Min792001" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
