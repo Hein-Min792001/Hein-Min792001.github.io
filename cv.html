@@ -3,506 +3,297 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hein Min Lwin – Java Developer Resume</title>
+  <title>Hein Min Lwin – Resume</title>
   <style>
-    /* ─────────────────────────────────────────────
-       ATS RESUME — Pure text, single-column, PDF-safe
-       Font: Arial (universally supported, ATS-safe)
-       ───────────────────────────────────────────── */
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      font-size: 11pt;
-      color: #000000;
-      background: #ffffff;
-      line-height: 1.45;
+      font-size: 10.5pt;
+      color: #000;
+      background: #fff;
+      line-height: 1.4;
     }
 
-    /* ── PAGE WRAPPER ── */
-    .resume {
+    /* ── Print wrapper ── */
+    .page {
       width: 8.5in;
-      min-height: 11in;
       margin: 0 auto;
-      padding: 0.65in 0.75in 0.65in 0.75in;
-      background: #ffffff;
+      padding: 0.6in 0.7in;
+      background: #fff;
     }
 
-    /* ── HEADER: Name & Contact ── */
-    .header {
-      text-align: center;
-      margin-bottom: 14pt;
-      border-bottom: 1.5pt solid #000000;
-      padding-bottom: 10pt;
-    }
-
+    /* ── Name block ── */
     .name {
-      font-size: 20pt;
+      font-size: 18pt;
       font-weight: bold;
-      color: #000000;
       letter-spacing: 1pt;
       text-transform: uppercase;
-      margin-bottom: 4pt;
+      text-align: center;
     }
 
-    .title-line {
-      font-size: 11pt;
-      font-weight: bold;
-      color: #000000;
-      margin-bottom: 6pt;
-    }
-
-    .contact-line {
+    .tagline {
+      text-align: center;
       font-size: 10pt;
-      color: #000000;
+      margin-top: 3pt;
+      margin-bottom: 5pt;
     }
 
-    .contact-line span { margin: 0 6pt; }
-    .contact-line span:not(:last-child)::after {
-      content: ' |';
-    }
-
-    /* ── SECTION ── */
-    .section {
-      margin-bottom: 12pt;
-    }
-
-    .section-title {
-      font-size: 11pt;
-      font-weight: bold;
-      color: #000000;
-      text-transform: uppercase;
-      letter-spacing: 0.5pt;
-      border-bottom: 1pt solid #000000;
-      padding-bottom: 2pt;
-      margin-bottom: 7pt;
-    }
-
-    /* ── SUMMARY ── */
-    .summary-text {
-      font-size: 10.5pt;
-      color: #000000;
-      line-height: 1.5;
-    }
-
-    /* ── WORK EXPERIENCE ── */
-    .job {
+    .contact {
+      text-align: center;
+      font-size: 9.5pt;
+      color: #000;
       margin-bottom: 10pt;
     }
 
-    .job-header {
+    .contact span + span::before {
+      content: "  |  ";
+      white-space: pre;
+    }
+
+    /* ── Section ── */
+    .section { margin-bottom: 10pt; }
+
+    .sec-title {
+      font-size: 10pt;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.6pt;
+      border-bottom: 1pt solid #000;
+      padding-bottom: 2pt;
+      margin-bottom: 6pt;
+    }
+
+    /* ── Entry (job / project / edu) ── */
+    .entry { margin-bottom: 7pt; }
+
+    .entry-head {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      flex-wrap: wrap;
-      gap: 4pt;
     }
 
-    .job-title {
-      font-size: 11pt;
+    .entry-title {
       font-weight: bold;
-      color: #000000;
+      font-size: 10.5pt;
     }
 
-    .job-dates {
-      font-size: 10pt;
-      color: #000000;
+    .entry-date {
+      font-size: 9.5pt;
       white-space: nowrap;
+      flex-shrink: 0;
     }
 
-    .job-company {
-      font-size: 10.5pt;
+    .entry-sub {
       font-style: italic;
-      color: #000000;
-      margin-top: 1pt;
-      margin-bottom: 5pt;
-    }
-
-    .job ul {
-      padding-left: 18pt;
-      list-style-type: disc;
-    }
-
-    .job ul li {
-      font-size: 10.5pt;
-      color: #000000;
-      margin-bottom: 3pt;
-      line-height: 1.45;
-    }
-
-    /* ── EDUCATION ── */
-    .edu-item {
-      margin-bottom: 8pt;
-    }
-
-    .edu-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 4pt;
-    }
-
-    .edu-school {
-      font-size: 11pt;
-      font-weight: bold;
-      color: #000000;
-    }
-
-    .edu-dates {
       font-size: 10pt;
-      color: #000000;
-    }
-
-    .edu-degree {
-      font-size: 10.5pt;
-      font-style: italic;
-      color: #000000;
-      margin-top: 1pt;
-    }
-
-    .edu-detail {
-      font-size: 10.5pt;
-      color: #000000;
-      margin-top: 2pt;
-    }
-
-    /* ── SKILLS ── */
-    .skills-row {
-      margin-bottom: 5pt;
-      font-size: 10.5pt;
-      color: #000000;
-      line-height: 1.5;
-    }
-
-    .skills-row strong {
-      font-weight: bold;
-    }
-
-    /* ── PROJECTS ── */
-    .project {
-      margin-bottom: 9pt;
-    }
-
-    .project-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      flex-wrap: wrap;
-      gap: 4pt;
-    }
-
-    .project-title {
-      font-size: 11pt;
-      font-weight: bold;
-      color: #000000;
-    }
-
-    .project-type {
-      font-size: 10pt;
-      color: #000000;
-    }
-
-    .project-sub {
-      font-size: 10.5pt;
-      font-style: italic;
-      color: #000000;
       margin-top: 1pt;
       margin-bottom: 4pt;
     }
 
-    .project ul {
-      padding-left: 18pt;
-      list-style-type: disc;
+    ul {
+      padding-left: 16pt;
+      list-style: disc;
     }
 
-    .project ul li {
-      font-size: 10.5pt;
-      color: #000000;
-      margin-bottom: 3pt;
-      line-height: 1.45;
+    li {
+      margin-bottom: 2pt;
+      font-size: 10pt;
+      line-height: 1.4;
     }
 
-    /* ── PRINT / PDF ── */
+    /* ── Skills table ── */
+    .skills { font-size: 10pt; line-height: 1.7; }
+    .skills strong { font-weight: bold; }
+
+    /* ── Print ── */
     @media print {
-      body { background: #ffffff; }
-      .resume { margin: 0; padding: 0.55in 0.65in; width: 100%; }
+      body { background: #fff; }
+      .page { padding: 0.5in 0.6in; width: 100%; margin: 0; }
       .no-print { display: none !important; }
-      a { color: #000000; text-decoration: none; }
     }
 
-    /* ── PRINT BUTTON (screen only) ── */
+    /* ── Print bar (screen only) ── */
     .print-bar {
-      display: flex;
-      justify-content: center;
-      padding: 16px;
-      background: #f3f3f3;
-      border-bottom: 1px solid #ddd;
-      gap: 10px;
+      text-align: center;
+      padding: 12px;
+      background: #f0f0f0;
+      border-bottom: 1px solid #ccc;
     }
 
-    .print-btn {
-      padding: 10px 28px;
-      background: #000000;
-      color: #ffffff;
+    .print-bar button {
+      padding: 9px 26px;
+      background: #000;
+      color: #fff;
       border: none;
       font-family: Arial, sans-serif;
       font-size: 13px;
       font-weight: bold;
       cursor: pointer;
-      letter-spacing: 0.5px;
+      margin-right: 10px;
     }
 
-    .print-btn:hover { background: #333333; }
+    .print-bar button:hover { background: #333; }
 
-    .print-hint {
-      font-family: Arial, sans-serif;
-      font-size: 12px;
+    .print-bar span {
+      font-size: 11px;
       color: #666;
-      display: flex;
-      align-items: center;
+      font-family: Arial, sans-serif;
     }
   </style>
 </head>
 <body>
 
-  <!-- Print bar (hidden on print/PDF) -->
   <div class="print-bar no-print">
-    <button class="print-btn" onclick="window.print()">Export as PDF / Print</button>
-    <span class="print-hint">
-      &nbsp;Tip: In the print dialog, choose "Save as PDF", set Margins to "None" or "Minimum", and disable "Headers and footers".
-    </span>
+    <button onclick="window.print()">Export as PDF</button>
+    <span>Tip: Margins → None &nbsp;|&nbsp; Uncheck "Headers and footers"</span>
   </div>
 
-  <!-- ═══════════════════════════════════
-       RESUME DOCUMENT
-       ═══════════════════════════════════ -->
-  <div class="resume">
+  <div class="page">
 
-    <!-- ── HEADER ── -->
-    <div class="header">
-      <div class="name">Hein Min Lwin</div>
-      <div class="title-line">Java Developer | Team Lead | Banking &amp; Finance Systems</div>
-      <div class="contact-line">
-        <span>Hlaing Township, Yangon, Myanmar</span>
-        <span>09976876714 / 09427164152</span>
-        <span>heinminlwin9090@gmail.com</span>
-        <span>github.com/Hein-Min792001</span>
-      </div>
+    <!-- NAME -->
+    <div class="name">Hein Min Lwin</div>
+    <div class="tagline">Java Developer &amp; Team Lead — Banking &amp; Finance Systems</div>
+    <div class="contact">
+      <span>Yangon, Myanmar</span>
+      <span>09976876714</span>
+      <span>heinminlwin9090@gmail.com</span>
+      <span>github.com/Hein-Min792001</span>
     </div>
 
-    <!-- ── PROFESSIONAL SUMMARY ── -->
+    <!-- SUMMARY -->
     <div class="section">
-      <div class="section-title">Professional Summary</div>
-      <p class="summary-text">
-        Results-driven Java Developer and Team Lead with 2+ years of hands-on experience delivering
-        mission-critical systems in the Banking and Financial Services sector. Proven expertise in
-        backend development using Core Java, Spring Framework (Spring Boot, Spring MVC, Spring Security),
-        and enterprise-grade databases (Oracle, PostgreSQL). Currently leading three production banking
-        projects at MIT, with responsibilities spanning system architecture, full-stack development,
-        code reviews, and stakeholder coordination. Committed to writing clean, maintainable code and
-        delivering reliable software on schedule.
+      <div class="sec-title">Summary</div>
+      <p style="font-size:10pt;line-height:1.5;">
+        Java Developer and Team Lead with 2+ years building mission-critical banking systems.
+        Experienced in full-stack development (Java / Spring Boot / Angular) and leading teams to deliver
+        on time. Strong background in Oracle, PostgreSQL, and financial-domain software.
       </p>
     </div>
 
-    <!-- ── WORK EXPERIENCE ── -->
+    <!-- EXPERIENCE -->
     <div class="section">
-      <div class="section-title">Work Experience</div>
+      <div class="sec-title">Work Experience</div>
 
-      <!-- Job 1 -->
-      <div class="job">
-        <div class="job-header">
-          <span class="job-title">Java Developer &amp; Team Lead</span>
-          <span class="job-dates">2022 – Present</span>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Java Developer &amp; Team Lead</span>
+          <span class="entry-date">2022 – Present</span>
         </div>
-        <div class="job-company">Myanmar Information Technology Co., Ltd. (MIT) — Yangon, Myanmar</div>
+        <div class="entry-sub">Myanmar Information Technology Co., Ltd. (MIT) — Yangon, Myanmar</div>
         <ul>
-          <li>Lead backend development and team coordination for three concurrent production banking system projects, including the Central Bank of Myanmar Management Information System (CBMMIS).</li>
-          <li>Architect and implement RESTful APIs using Spring Boot and Spring MVC, integrating with Oracle and PostgreSQL databases for high-volume financial transaction processing.</li>
-          <li>Implement enterprise security using Spring Security, including role-based access control (RBAC), JWT authentication, and session management across banking platforms.</li>
-          <li>Design and deliver complex financial reports using Jasper Reports and SSRS Reports for regulatory compliance and management dashboards.</li>
-          <li>Lead full-stack development of Agent Banking Management Information System (AgentMIS), covering backend APIs, Angular frontend dashboards, and SSRS reporting modules.</li>
-          <li>Design merchant onboarding workflow system with full banking compliance, collaborating with business stakeholders to define and implement regulatory requirements.</li>
-          <li>Conduct code reviews, mentor junior developers, manage sprint planning, and deliver features on schedule within an Agile development environment.</li>
-          <li>Optimize SQL queries and database performance for Oracle and PostgreSQL to handle high-frequency banking transaction loads.</li>
+          <li>Lead backend development for 3 concurrent production banking systems (CBMMIS, AgentMIS, Merchant Onboarding).</li>
+          <li>Architect REST APIs using Spring Boot / Spring MVC; integrate Oracle and PostgreSQL for high-volume transaction processing.</li>
+          <li>Implement role-based security with Spring Security and JWT across banking platforms.</li>
+          <li>Deliver complex financial reports using Jasper Reports and SSRS; present directly to stakeholders.</li>
+          <li>Conduct code reviews, mentor junior developers, and manage sprint planning in an Agile team.</li>
         </ul>
-      </div>
-
-    </div>
-
-    <!-- ── TECHNICAL SKILLS ── -->
-    <div class="section">
-      <div class="section-title">Technical Skills</div>
-
-      <div class="skills-row">
-        <strong>Programming Languages:</strong> Java (Core Java, Java 8+, Java 17, Java 21), SQL, JavaScript (ES6+)
-      </div>
-      <div class="skills-row">
-        <strong>Frameworks &amp; Libraries:</strong> Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Spring Framework, Hibernate, JDBC
-      </div>
-      <div class="skills-row">
-        <strong>Frontend Technologies:</strong> Angular, React, HTML5, CSS3, TypeScript
-      </div>
-      <div class="skills-row">
-        <strong>Databases:</strong> Oracle, PostgreSQL, MySQL, MSSQL
-      </div>
-      <div class="skills-row">
-        <strong>Messaging &amp; Caching:</strong> RabbitMQ, Redis
-      </div>
-      <div class="skills-row">
-        <strong>Reporting Tools:</strong> Jasper Reports, SSRS (SQL Server Reporting Services)
-      </div>
-      <div class="skills-row">
-        <strong>DevOps &amp; Tools:</strong> Docker, Docker Compose, Git, Maven, Postman, IntelliJ IDEA
-      </div>
-      <div class="skills-row">
-        <strong>Concepts:</strong> REST API Design, Microservices Architecture, RBAC, JWT Authentication, OOP, Data Structures &amp; Algorithms, Multithreading &amp; Concurrency, Design Patterns, Agile/Scrum, Banking Compliance
-      </div>
-      <div class="skills-row">
-        <strong>Languages:</strong> English (Professional Proficiency), Burmese (Native), Korean (Basic)
       </div>
     </div>
 
-    <!-- ── PROJECT EXPERIENCE ── -->
+    <!-- SKILLS -->
     <div class="section">
-      <div class="section-title">Project Experience</div>
-
-      <!-- Project 1: CBMMIS -->
-      <div class="project">
-        <div class="project-header">
-          <span class="project-title">CBMMIS — Central Bank of Myanmar Management Information System</span>
-          <span class="project-type">Production | Team Lead</span>
-        </div>
-        <div class="project-sub">MIT | Java, Spring Security, Oracle, Jasper Reports</div>
-        <ul>
-          <li>Led backend development and team coordination for the Central Bank of Myanmar's core management information system.</li>
-          <li>Responsible for system architecture decisions, code reviews, sprint planning, and on-time feature delivery.</li>
-          <li>Implemented enterprise security, transaction processing, and regulatory reporting modules.</li>
-        </ul>
-      </div>
-
-      <!-- Project 2: AgentMIS -->
-      <div class="project">
-        <div class="project-header">
-          <span class="project-title">AgentMIS — Agent Bank Management Information System</span>
-          <span class="project-type">Production | Full-Stack Lead</span>
-        </div>
-        <div class="project-sub">MIT | Spring MVC, PostgreSQL, Angular, SSRS Reports</div>
-        <ul>
-          <li>Managed full-stack development of an agent banking management platform from requirements to deployment.</li>
-          <li>Delivered backend REST APIs, Angular frontend dashboards, and complex SSRS reporting integrations.</li>
-          <li>Coordinated closely with stakeholders to align system features with banking business rules.</li>
-        </ul>
-      </div>
-
-      <!-- Project 3: Merchant Onboarding -->
-      <div class="project">
-        <div class="project-header">
-          <span class="project-title">Merchant Onboarding System — Banking Compliance Platform</span>
-          <span class="project-type">In Progress | Lead Developer</span>
-        </div>
-        <div class="project-sub">MIT | Java, Spring Framework, Banking Compliance</div>
-        <ul>
-          <li>Designing and leading a merchant registration and onboarding workflow system with full banking compliance requirements.</li>
-          <li>Collaborating with business analysts and compliance teams to translate regulatory requirements into software specifications.</li>
-        </ul>
-      </div>
-
-      <!-- Project 4: Payment Wallet (Personal) -->
-      <div class="project">
-        <div class="project-header">
-          <span class="project-title">Payment Reconciliation Engine — Digital Wallet System</span>
-          <span class="project-type">Personal Project | github.com/Hein-Min792001/payment-wallet</span>
-        </div>
-        <div class="project-sub">Spring Boot 3, Spring Data JPA, PostgreSQL, Redis, RabbitMQ, Angular 17, Docker Compose</div>
-        <ul>
-          <li>Designed and built a full-featured digital wallet system from scratch, handling deposits, peer-to-peer transfers, and refunds with financial-grade reliability.</li>
-          <li>Implemented pessimistic locking to prevent concurrent overdraft scenarios during simultaneous wallet transfers.</li>
-          <li>Built a Redis idempotency layer to eliminate duplicate payment processing on repeated requests (Idempotency-Key header).</li>
-          <li>Applied the Outbox Pattern with RabbitMQ to guarantee reliable async payment notifications even under broker failure.</li>
-          <li>Stored balances as Long (cents) and applied a double-entry ledger model; transactions are immutable once completed — refunds create new reversal records.</li>
-          <li>Implemented JWT-based authentication, role-based access control, and a paginated transaction history API.</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- ── EDUCATION ── -->
-    <div class="section">
-      <div class="section-title">Education</div>
-
-      <div class="edu-item">
-        <div class="edu-header">
-          <span class="edu-school">University of the People (UoPeople)</span>
-          <span class="edu-dates">2020 – Present</span>
-        </div>
-        <div class="edu-degree">Bachelor of Science in Computer Science (Online, In Progress)</div>
-        <div class="edu-detail">23 of 40 courses completed — Current GPA: 3.85 / 4.00</div>
-      </div>
-
-      <div class="edu-item">
-        <div class="edu-header">
-          <span class="edu-school">University of Computer Studies, Mandalay (UCSM)</span>
-          <span class="edu-dates">2018 – 2020</span>
-        </div>
-        <div class="edu-degree">Bachelor of Computer Science (Transferred)</div>
-        <div class="edu-detail">Semester 1 GPA: 3.94 | Semester 2 GPA: 3.79</div>
-      </div>
-
-      <div class="edu-item">
-        <div class="edu-header">
-          <span class="edu-school">Java Developer Class (JDC) — Batch 7</span>
-          <span class="edu-dates">Certificate</span>
-        </div>
-        <div class="edu-degree">Certificate in Java Development</div>
-        <div class="edu-detail">Completed hands-on training in Core Java, Spring Framework, and full-stack web development. Projects: Hotel Booking System, Payroll Management System, Online Shopping Website.</div>
-      </div>
-
-      <div class="edu-item">
-        <div class="edu-header">
-          <span class="edu-school">Matriculation (High School)</span>
-          <span class="edu-dates">Pre-University</span>
-        </div>
-        <div class="edu-degree">Passed with Five Distinctions</div>
-        <div class="edu-detail">Strong academic foundation in Mathematics and Sciences.</div>
-      </div>
-
-    </div>
-
-    <!-- ── ADDITIONAL INFORMATION ── -->
-    <div class="section">
-      <div class="section-title">Additional Information</div>
-
-      <div class="skills-row">
-        <strong>Domain Expertise:</strong> Banking &amp; Financial Services, Agent Banking, Central Bank Systems, Merchant Onboarding, Financial Compliance
-      </div>
-      <div class="skills-row">
-        <strong>Leadership:</strong> Team Lead for 3 concurrent production projects; responsibilities include architecture decisions, code reviews, sprint planning, junior developer mentoring, and stakeholder communication
-      </div>
-      <div class="skills-row">
-        <strong>GitHub:</strong> github.com/Hein-Min792001
-      </div>
-      <div class="skills-row">
-        <strong>Availability:</strong> Open to new opportunities — full-time, on-site or hybrid
+      <div class="sec-title">Technical Skills</div>
+      <div class="skills">
+        <div><strong>Languages:</strong> Java (8, 17, 21), SQL, JavaScript / TypeScript</div>
+        <div><strong>Frameworks:</strong> Spring Boot, Spring MVC, Spring Security, Spring Data JPA, Hibernate</div>
+        <div><strong>Frontend:</strong> Angular, React, HTML5, CSS3</div>
+        <div><strong>Databases:</strong> Oracle, PostgreSQL, MySQL, MSSQL</div>
+        <div><strong>Tools &amp; DevOps:</strong> Docker, Git, Maven, Redis, RabbitMQ, Jasper Reports, SSRS, Postman</div>
+        <div><strong>Concepts:</strong> REST API, RBAC, JWT, OOP, Design Patterns, Multithreading, Agile / Scrum, Banking Compliance</div>
       </div>
     </div>
 
-  </div><!-- end .resume -->
+    <!-- PROJECTS -->
+    <div class="section">
+      <div class="sec-title">Projects</div>
 
-  <script>
-    // Auto-set print settings hint based on browser
-    document.addEventListener('DOMContentLoaded', function() {
-      const isChrome = navigator.userAgent.indexOf('Chrome') > -1;
-      const isFirefox = navigator.userAgent.indexOf('Firefox') > -1;
-      const hint = document.querySelector('.print-hint');
-      if (isChrome) {
-        hint.textContent = ' Tip: Click above → "Save as PDF" → set Margins to "None" → uncheck "Headers and footers" → Save.';
-      } else if (isFirefox) {
-        hint.textContent = ' Tip: Click above → "Print to PDF" → set Margins to "None" → uncheck "Print headers and footers" → Print.';
-      }
-    });
-  </script>
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">CBMMIS — Central Bank of Myanmar MIS</span>
+          <span class="entry-date">Production · Team Lead</span>
+        </div>
+        <div class="entry-sub">Java, Spring Security, Oracle, Jasper Reports</div>
+        <ul>
+          <li>Led architecture and delivery for the Central Bank's core management information system.</li>
+          <li>Owned security layer, reporting modules, and team coordination across full project lifecycle.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">AgentMIS — Agent Bank Management System</span>
+          <span class="entry-date">Production · Full-Stack Lead</span>
+        </div>
+        <div class="entry-sub">Spring MVC, PostgreSQL, Angular, SSRS</div>
+        <ul>
+          <li>Managed full-stack delivery — backend APIs, Angular dashboards, and reporting integrations.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Payment Reconciliation Engine</span>
+          <span class="entry-date">Personal · github.com/Hein-Min792001/payment-wallet</span>
+        </div>
+        <div class="entry-sub">Spring Boot 3, PostgreSQL, Redis, RabbitMQ, Angular 17, Docker</div>
+        <ul>
+          <li>Digital wallet with deposits, transfers, and refunds — built with pessimistic locking and Redis idempotency to prevent double-charging.</li>
+          <li>Applied Outbox Pattern for guaranteed async notifications; double-entry ledger with immutable transaction records.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Enterprise Warehouse Management System (EWMS)</span>
+          <span class="entry-date">Personal · github.com/Hein-Min792001/enterprise-wms</span>
+        </div>
+        <div class="entry-sub">Java 21, Spring Boot 3.2, Spring Security, PostgreSQL, Angular 17, Flyway, Docker</div>
+        <ul>
+          <li>Full-stack WMS covering purchase orders, goods receipt, sales orders, picking, packing, and shipping workflows.</li>
+          <li>JWT auth, 7-role RBAC, optimistic locking on stock, Flyway migrations (34 tables), and full audit trail.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="section">
+      <div class="sec-title">Education</div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">University of the People (UoPeople)</span>
+          <span class="entry-date">2020 – Present</span>
+        </div>
+        <div class="entry-sub">B.Sc. Computer Science — Online, In Progress &nbsp;|&nbsp; GPA: 3.85 / 4.00</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">University of Computer Studies, Mandalay (UCSM)</span>
+          <span class="entry-date">2018 – 2020</span>
+        </div>
+        <div class="entry-sub">Computer Science (Transferred) &nbsp;|&nbsp; Sem 1: 3.94 &nbsp;|&nbsp; Sem 2: 3.79</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <span class="entry-title">Java Developer Class (JDC) — Batch 7</span>
+          <span class="entry-date">Certificate</span>
+        </div>
+        <div class="entry-sub">Core Java, Spring Framework, Full-Stack Web Development</div>
+      </div>
+
+      <div class="entry" style="margin-bottom:0;">
+        <div class="entry-head">
+          <span class="entry-title">Matriculation (High School)</span>
+          <span class="entry-date">Pre-University</span>
+        </div>
+        <div class="entry-sub">Passed with Five Distinctions</div>
+      </div>
+    </div>
+
+  </div><!-- end .page -->
 
 </body>
 </html>
